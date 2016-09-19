@@ -19,14 +19,8 @@ This Learning Challenge uses Flight data to predict when a flight will be late. 
 ## 1. Access Azure ML
 
 This Azure Machine Learning Challenge can be completed with:
-* **Guest Access** - This does not require an Azure subscription or a credit card. It is anonymous access.
-* **Your Own Account** - Sign in and use a work, school or Microsoft account. Please do not take a tour now, explore the tour later.
-
-## If you are using Guest Access:
-
-Go [here](http://studio.azureml.net/home/anonymous) to access Azure ML.
-
-If you are using Your Own Account, please sign in now.  If you create your own account, please do not take a tour now as you can explore the tour later. Please select **Not Now** when prompted to take a tour.
+* [Guest Access](http://studio.azureml.net/home/anonymous) - This does not require an Azure subscription or a credit card. It is anonymous access.
+* [Your Own Account](http://studio.azureml.net/home/anonymous) - Sign in and use a work, school or Microsoft account. Please do not take a tour now, explore the tour later.
 
 **Add info and url to create a brand new account here **
 
@@ -35,38 +29,40 @@ If you are using Your Own Account, please sign in now.  If you create your own a
 ### A. Make a new experiment
 Select + New in the lower left corner.
 
-![Make a  new experiment](https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png)
-
-Number 2:
-<img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="75">
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="600">
 
 ### B. Create an experiment
 On the left panel, Experiment should be highlighted in grey and you will see a tile with a plus sign and the words Blank Experiment.  Please select Experiment if it is not selected.
-![]()
+
 
 ### C. Select + Blank Experiment
 
-![Select + Blank Experiment](https://cloud.githubusercontent.com/assets/6098674/18649064/7e86bce2-7e8b-11e6-959b-5471e8b14a9b.png)
+Select + Blank Experiment
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649064/7e86bce2-7e8b-11e6-959b-5471e8b14a9b.png" width="600">
 
 ### D. Give the experiment a title
 By default a title is created with a name like "**_Experiment created on 9/24/2016_**". 
 Change the title to "My first Azure ML experiment" by editing the provided title.
-![Change the title](https://cloud.githubusercontent.com/assets/6098674/18649061/7e817444-7e8b-11e6-815d-2a7dd7b154ac.png)
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649061/7e817444-7e8b-11e6-815d-2a7dd7b154ac.png" width="600">
 
 ## 3. Import, Review and Clean Data
  
 ### A. Search for flight data
 Type “flight” into the search bar and drag the Flight on-time performance Dataset to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
 
-![Search for flight data](https://cloud.githubusercontent.com/assets/6098674/18649062/7e8382f2-7e8b-11e6-83f5-1f3a5282a6cb.png)
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649062/7e8382f2-7e8b-11e6-83f5-1f3a5282a6cb.png" width="600">
 
 ### B. Import data
-![Drag the flight dataset into the workspace.](https://cloud.githubusercontent.com/assets/6098674/18649065/7e86d826-7e8b-11e6-8a44-6ea684e41616.png)
- 
+Drag the flight dataset into the workspace.
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649065/7e86d826-7e8b-11e6-8a44-6ea684e41616.png" width="600">
+
 ### C. Review Data
 Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
-![Visualize data](https://cloud.githubusercontent.com/assets/6098674/18649060/7e7c18aa-7e8b-11e6-8ea7-727458389565.png)
- 
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649060/7e7c18aa-7e8b-11e6-8ea7-727458389565.png" width="600"> 
+
  Note: In a typical data science experiement, it is likely going to be necessary to **Data Wrangle** or clean dirty data. For this example, the data set is clean.
  
 ### D. Close the data visualization window
@@ -80,7 +76,8 @@ You need to look at the data in the dataset and decide which columns represent d
 ### A. Add Manipulation to Select Columns in Dataset
 First, type**project** into the search bar and drag the **Select Columns in Dataset" Manipulation to the workspace.
 This manipulation enables you to specify which columns in the data set you think are significant to the prediction.  
-![Column Selection Manipulation](https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png)
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png" width="600">
 
 ### B. Launch Column Selector
 On the far right, select *Launch column selector*
@@ -88,20 +85,23 @@ On the far right, select *Launch column selector*
 
 ### C. Select Columns
 Select the columns you think affect whether or not a flight is delayed as well as the column we want to predict ArrDel15. In the following screenshot, I selected Month, Carrier (airline), OriginAirportID, DestAirportID, and ArrDel15. You might select more or less columns.  You can also add or remove columns later.
-![Launch column selection](https://cloud.githubusercontent.com/assets/6098674/18649066/7e8d4904-7e8b-11e6-9c74-1c3ac80f3387.png)
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649066/7e8d4904-7e8b-11e6-9c74-1c3ac80f3387.png" width="600">
 
 ### D. Complete Column Selection
 Select the checkbox in the lower right of the Select Columns Window.
 
 ### E. Connect Flight on-time performance task to Select Columns in Dataset task
 Select the output of the Flight on-time performance task by clicking on the lower center dot and dragging to the input, top center dot, of the Select Columns in Dataset task.
-![Connect](https://cloud.githubusercontent.com/assets/6098674/18649067/7e95f8e2-7e8b-11e6-8495-7ac33168f341.png)
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649067/7e95f8e2-7e8b-11e6-8495-7ac33168f341.png" width="600">
 
 ## 5. Split The Data Into A Training And Test Set
 
 ### A. Split Data Task
 Type “split” into the search bar and drag the Split Data task to the workspace. Connect the output of Project Columns task to the input of the Split Data task.
-![Split](https://cloud.githubusercontent.com/assets/6098674/18649068/7ec6a500-7e8b-11e6-8c36-7ca009ca3e22.png)
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649068/7ec6a500-7e8b-11e6-8c36-7ca009ca3e22.png" width="600">
 
 ### B. Split our input data
 The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop. Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows in the first output 
