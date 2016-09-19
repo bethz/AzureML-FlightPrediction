@@ -29,7 +29,7 @@ This Azure Machine Learning Challenge can be completed with:
 Let's get started by making a new experiment.
 
 ### A. Make a new experiment
-Select + New in the lower left corner.
+Select "**+New**" in the lower left corner.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="600">
 
@@ -45,7 +45,7 @@ Select + Blank Experiment.
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649064/7e86bce2-7e8b-11e6-959b-5471e8b14a9b.png" width="600">
 
 ### D. Give the experiment a title
-By default a title is created with a name like "**_Experiment created on 9/24/2016_**". 
+By default, a title is created with a name like "**_Experiment created on 9/24/2016_**". 
 Change the title to "My first Azure ML experiment" by editing the provided title.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649061/7e817444-7e8b-11e6-815d-2a7dd7b154ac.png" width="600">
@@ -66,11 +66,11 @@ Drag the Flight on-time performance Dataset to the workspace as show in the imag
 ### C. Review Data
 Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. 
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18651431/22d906bc-7e99-11e6-957d-dba92669f412.png" width="600">
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649060/7e7c18aa-7e8b-11e6-8ea7-727458389565.png" width="600"> 
 
 Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18649060/7e7c18aa-7e8b-11e6-8ea7-727458389565.png" width="600"> 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18651431/22d906bc-7e99-11e6-957d-dba92669f412.png" width="600">
 
  Note: In an actual data science experiment, it is likely going to be necessary to **Data Wrangle** or clean dirty data. For this example, the data set is clean.
  
