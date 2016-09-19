@@ -26,18 +26,22 @@ This Azure Machine Learning Challenge can be completed with:
 
 ## 2. Create an Experiment
 
+Let's get started by making a new experiment.
+
 ### A. Make a new experiment
 Select + New in the lower left corner.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="600">
 
 ### B. Create an experiment
-On the left panel, Experiment should be highlighted in grey and you will see a tile with a plus sign and the words Blank Experiment.  Please select Experiment if it is not selected.
+On the left panel, Experiment should be highlighted in grey. Please select Experiment if it is not selected.
 
 
 ### C. Select + Blank Experiment
 
-Select + Blank Experiment
+To the right of Experiment, you will see a tile with a plus sign and the words Blank Experiment.
+Select + Blank Experiment.
+
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649064/7e86bce2-7e8b-11e6-959b-5471e8b14a9b.png" width="600">
 
 ### D. Give the experiment a title
@@ -49,29 +53,32 @@ Change the title to "My first Azure ML experiment" by editing the provided title
 ## 3. Import, Review and Clean Data
  
 ### A. Search for flight data
-Type “flight” into the search bar and drag the Flight on-time performance Dataset to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
+Type “flight” into the search bar.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649062/7e8382f2-7e8b-11e6-83f5-1f3a5282a6cb.png" width="600">
 
 ### B. Import data
-Drag the flight dataset into the workspace.
+
+Drag the Flight on-time performance Dataset to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649065/7e86d826-7e8b-11e6-8a44-6ea684e41616.png" width="600">
 
 ### C. Review Data
-Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
+Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. 
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18651431/22d906bc-7e99-11e6-957d-dba92669f412.png" width="600">
+
+Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649060/7e7c18aa-7e8b-11e6-8ea7-727458389565.png" width="600"> 
 
- Note: In a typical data science experiement, it is likely going to be necessary to **Data Wrangle** or clean dirty data. For this example, the data set is clean.
+ Note: In an actual data science experiment, it is likely going to be necessary to **Data Wrangle** or clean dirty data. For this example, the data set is clean.
  
 ### D. Close the data visualization window
-Click on the X in the top right corner to close the data visualization window..
+Click on the X in the top right corner of the window to close the data visualization window..
  
 ## 4. Specify Columns to Use
 You need to look at the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ArrDel15.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
-
-
 
 ### A. Add Manipulation to Select Columns in Dataset
 First, type**project** into the search bar and drag the **Select Columns in Dataset" Manipulation to the workspace.
@@ -90,6 +97,7 @@ Select the columns you think affect whether or not a flight is delayed as well a
 
 ### D. Complete Column Selection
 Select the checkbox in the lower right of the Select Columns Window.
+Note the Exclamation Point in the Select Columns Task. Hover over it to see the error. This will be fixed in the next step.
 
 ### E. Connect Flight on-time performance task to Select Columns in Dataset task
 Select the output of the Flight on-time performance task by clicking on the lower center dot and dragging to the input, top center dot, of the Select Columns in Dataset task.
@@ -104,7 +112,9 @@ Type “split” into the search bar and drag the Split Data task to the workspa
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649068/7ec6a500-7e8b-11e6-8c36-7ca009ca3e22.png" width="600">
 
 ### B. Split our input data
-The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop. Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows in the first output 
+First, connect the output of the Select Columns in Dataset to the input of the Split Data task.
+
+The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop. Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows. 
 
 ## 6. Train the model
 
