@@ -32,12 +32,17 @@ If you are using Your Own Account, please sign in now.  If you create your own a
 
 ## 2. Create an Experiment
 
-### A. Create a blank experiment
+### A. Make a new experiment
+Select + New in the lower left corner.
+
+https://cloud.githubusercontent.com/assets/6098674/18647709/4a9568da-7e85-11e6-8dd6-6291d6dab47d.png
+
+### B. Create a blank experiment
 On the left panel, Experiment should be highlighted in grey and you will see a tile with a plus sign and the words Blank Experiment.  Please select Experiment if it is not selected.
 
-### B. Select + Blank Experiment
+### C. Select + Blank Experiment
 
-### C. Give the experiment a title
+### D. Give the experiment a title
 By default a title is created with a name like "**_Experiment created on 9/24/2016_**". 
 Change the title to "My first Azure ML experiment" by editing the provided title.
  
