@@ -5,14 +5,15 @@ This is detailed documentation for the Azure Machine Learning, ML, tutorial/work
 
 This Learning Challenge uses Flight data to predict when a flight will be late. We begin by accessing Azure ML. Here is an overview of what we will do:
 1. Access Azure ML
-2. Create Experiment
-3. Import Data
-4. Review and Clean Data
-5. Split the data into a training and test set
-6. Create a model
-7. Train the model
-8. Evaluate our model
-9. Improve the model
+2. Create an Experiment
+3. Import, Review and Clean Data
+4. Specify Columns to Use
+5. Split The Data Into A Training And Test Set
+6. Train the model
+7. Select Algorithm
+8. Score the Model
+9. Evaluate Model
+10. Run Experiment!
  
 # 1. Access Azure ML
 
@@ -53,7 +54,7 @@ Change the title to "My first Azure ML experiment" by editing the provided title
  Click on the X in the top right corner to close the data visualizatio window..
  
 # 4. Specify Columns to Use
-     You need to look at the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ArrDel15.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
+You need to look at the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ArrDel15.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
      
 ## A. Add Manipulation to Select Columns in Dataset
 First, type**project** into the search bar and drag the **Select Columns in Dataset" Manipulation to the workspace.
@@ -76,9 +77,34 @@ Select the output of the Flight on-time performance task by clicking on the lowe
 ## A. Split Data Task
 Type “split” into the search bar and drag the Split Data task to the workspace. Connect the output of Project Columns task to the input of the Split Data task.
 
-6. Create a model
-7. Train the model
-8. Evaluate our model
-9. Improve the model
+## B. Split our input data
+The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop. Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows in the first output 
+
+# 6. Train the model
+
+## A. Connect Data
+Type “train model” into the search bar. Drag the train model task to the workspace. Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, Results Dataset1, (the one on the left) of the Split Data task to the rightmost input of the Train model task. This will take 80 % of our data and use it to train/teach our model to make predictions.
+
+## B. Identify Predicted Value
+Next,we identify which data is to be predicted. In our case, we are predicting the value of the column ArrDel15 which indicates if a flight arrival time was delayed by more than 15 minutes. Click on the Train Model task. In the properties window select Launch Column Selector. Select the column ArrDel15. Click the checkbox in the lower right corner to complete the operation.
+
+
+## 7. Select Algorithm
+If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. We are going to use a standard algorithm call two-class Neural Network.  Type “two-class” into the search bar. You will see a number of different classification algorithms listed and each has its own advantages and disadvantages. Each of the two-class algorithms is designed to predict a binary outcome. Select Two-Class Neural Network and drag it to the workspace. Connect the output of the Two-Class Neural Network task to the leftmost input of the Train Model task.
+
+7. Score the Model
+After the model is trained, it is evaluated to determine how well it predicts delayed flights, so the model is scored by testing it against the Test Data which is remaining 20% of the data we split to the second output of the Split Data task.
+
+## A. Connect Test Data
+Type “score” into the search bar and drag the Score Model task to the workspace. Connect the output of Train Model to the left input of the Score model task, the Trained Model input. Connect the Test Data, the right output of the Split Data task to the Dataset input or the right input of the Score Model task as shown in the following screenshot.  The output of this task is a Scored dataset.
+
+8. Evaluate Model
+Next, the model is evaluated to determine its accuracy.
+
+## A.Type “evaluate” into the search bar and drag the Evaluate Model task to the bottom of the workspace. Connect the Scored dataset output of the Score model task to the left input of the Evaluate Model task.  The other input and output of the Evaluate Model task are not connected at this time.
+
+You are now ready to run your experiment!
+
+
 
 
