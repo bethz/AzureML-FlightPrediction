@@ -37,6 +37,8 @@ Select + New in the lower left corner.
 
 ![Make a  new experiment](https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png)
 
+Number 2:
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="75">
 
 ### B. Create an experiment
 On the left panel, Experiment should be highlighted in grey and you will see a tile with a plus sign and the words Blank Experiment.  Please select Experiment if it is not selected.
