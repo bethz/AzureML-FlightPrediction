@@ -24,7 +24,7 @@ This Azure Machine Learning Challenge can be completed with:
 
 ## If you are using Guest Access:
 
-Go [here](http://studio.azureml.net/home) to access Azure ML.
+Go [here](http://studio.azureml.net/home/anonymous) to access Azure ML.
 
 If you are using Your Own Account, please sign in now.  If you create your own account, please do not take a tour now as you can explore the tour later. Please select **Not Now** when prompted to take a tour.
 
