@@ -4,6 +4,7 @@ This is detailed documentation for the Azure Machine Learning, ML, tutorial/work
 # Azure Machine Learning Challenge for Flight Prediction
 
 This Learning Challenge uses Flight data to predict when a flight will be late. We begin by accessing Azure ML. Here is an overview of what we will do:
+
 1. Access Azure ML
 2. Create an Experiment
 3. Import, Review and Clean Data
