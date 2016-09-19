@@ -35,7 +35,8 @@ If you are using Your Own Account, please sign in now.  If you create your own a
 ### A. Make a new experiment
 Select + New in the lower left corner.
 
-https://cloud.githubusercontent.com/assets/6098674/18647709/4a9568da-7e85-11e6-8dd6-6291d6dab47d.png
+![Make a  new experiment](https://cloud.githubusercontent.com/assets/6098674/18647709/4a9568da-7e85-11e6-8dd6-6291d6dab47d.png)
+![]()
 
 ### B. Create a blank experiment
 On the left panel, Experiment should be highlighted in grey and you will see a tile with a plus sign and the words Blank Experiment.  Please select Experiment if it is not selected.
