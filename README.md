@@ -49,15 +49,18 @@ Change the title to "My first Azure ML experiment" by editing the provided title
  
 ## 3. Import, Review and Clean Data
  
- ### A. Import data
+ ### A. Search for flight data
  Type “flight” into the search bar and drag the Flight on-time performance Dataset to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
  
- ### B. Review Data
+ ### B. Import data
+ Drag the flight dataset into the workspace.
+ 
+ ### C. Review Data
  Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
  
  Note: In a typical data science experiement, it is likely going to be necessary to **Data Wrangle** or clean dirty data. For this example, the data set is clean.
  
- ### C. Close the data visualization window
+ ### D. Close the data visualization window
  Click on the X in the top right corner to close the data visualizatio window..
  
 ## 4. Specify Columns to Use
