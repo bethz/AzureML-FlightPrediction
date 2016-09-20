@@ -222,6 +222,8 @@ But, you can see from the results above my model predicted every single flight w
 
 Your challenge is to improve the model and try different experiments. Change the algorithm, change algorithm parameters, change project columns to get the best possible accuracy/true/false positive/negative results! 
 
+Note: As you make changes you will need to re-run the Experiment.
+
 Good Luck! 
 
 
