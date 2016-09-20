@@ -29,7 +29,7 @@ This Azure Machine Learning Challenge can be completed with:
 Let's get started by making a new experiment.
 
 ### A. Make a new experiment
-Select "**+New**" in the lower left corner.
+Select ```+New``` in the lower left corner.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/2ANewExperiment.png" width="600">
 
