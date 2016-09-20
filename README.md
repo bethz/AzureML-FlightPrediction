@@ -131,7 +131,6 @@ Type “**train model**” into the search bar. Drag the ```Train Model``` task 
 
 Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, ```Results Dataset1```, (the circle on the left) of the ```Split Data``` task to the **rightmost** input of the ```Train Model``` task. This will take 80 % of our data and use it to train/teach our model to make predictions.
 
-[UPDATE PHOTO TO SHOW CONNECTION]
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/6a.png" width="600">
 
 ### B. Identify Predicted Value
@@ -154,8 +153,6 @@ Type “**two-class**” into the search bar. You will see a number of different
 Select ```Two-Class Neural Network``` and drag it to the workspace. Connect the output of the ```Two-Class Neural Network``` task to the **leftmost** input of the ```Train Model``` task.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/7a.png" width="600">
-
-[NEED IMAGE]
 
 ## 8. Score the Model
 After the model is trained, it is evaluated to determine how well it predicts delayed flights, so the model is scored by testing it against the Test Data which is the remaining 20% of the data we split to the second output of the ```Split Data``` task.
@@ -186,7 +183,7 @@ Select Run on the bottom toolbar. You will see green check marks appear on each 
 
 This process can take several minutes.  When there is a green check mark on the ```Evaluate Model``` task the process is complete.
 
-[NEED SCREEN SHOT]
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/10a.png" width="600">
 
 ## 11. Post Run: Evaluate Model
 
@@ -196,7 +193,6 @@ It is usually necessary to evaluate the model, improve it, re-run it and repeat.
 
 When the entire experiment is completed,  right click on the ```Evaluate Model``` task and select “**Evaluation results | Visualize**” to see how well the model predicted delayed flights.  
 
-[UPDATE SCREENSHOT TO highlight clicks]
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/11a.png" width="600">
 
 ## 12. Interpreting Results
