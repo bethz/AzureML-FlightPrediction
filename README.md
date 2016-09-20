@@ -88,22 +88,20 @@ Connect the output of **Flight on-time performance** dataset to the input of the
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png" width="600">
 
-### B. Launch Column Selector
-On the far right, select **Launch column selector**
+### B. Connect Flight on-time performance task to Select Columns in Dataset task
+Select the output of the Flight on-time performance task by clicking on the lower center dot and dragging to the input, top center dot, of the Select Columns in Dataset task.
 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18649067/7e95f8e2-7e8b-11e6-8495-7ac33168f341.png" width="600">
+### C. Launch Column Selector
+On the far right, select **Launch column selector**.
 
-### C. Select Columns
+### D. Select Columns
 Select the columns you think affect whether or not a flight is delayed as well as the column we want to predict ArrDel15. In the following screenshot, I selected Month, Carrier (airline), OriginAirportID, DestAirportID, and ArrDel15. You might select more or less columns.  You can also add or remove columns later.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649066/7e8d4904-7e8b-11e6-9c74-1c3ac80f3387.png" width="600">
 
-### D. Complete Column Selection
-Select the checkbox in the lower right of the Select Columns Window.
-
-### E. Connect Flight on-time performance task to Select Columns in Dataset task
-Select the output of the Flight on-time performance task by clicking on the lower center dot and dragging to the input, top center dot, of the Select Columns in Dataset task.
-
-<img src="https://cloud.githubusercontent.com/assets/6098674/18649067/7e95f8e2-7e8b-11e6-8495-7ac33168f341.png" width="600">
+### E. Complete Column Selection
+Select the checkbox in the lower right of the **Select columns** window.
 
 ## 5. Split The Data Into A Training And Test Set
 
