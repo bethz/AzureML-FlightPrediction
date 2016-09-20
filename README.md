@@ -84,7 +84,7 @@ This manipulation enables you to specify which columns in the data set you think
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4a.png" width="600">
 
-### B. Connect Flight on-time performance task to ```Select Columns in Dataset``` task
+### B. Connect Flight on-time performance task to Select Columns in Dataset task
 Connect the output of ```Flight on-time performance``` dataset to the input of the ```Select Columns in Dataset``` by clicking on the lower center dot and dragging to the input, top center dot, of the ```Select Columns in Dataset``` task.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4b.png" width="600">
