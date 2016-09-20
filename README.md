@@ -19,10 +19,10 @@ This Learning Challenge uses Flight data to predict when a flight will be late. 
 ## 1. Access Azure ML
 
 This Azure Machine Learning Challenge can be completed with:
-* [Guest Access](http://studio.azureml.net/home/anonymous) - This does not require an Azure subscription or a credit card. It is anonymous access.
-* [Your Own Account](http://studio.azureml.net/home/anonymous) - Sign in and use a work, school or Microsoft account. Please do not take a tour now, explore the tour later.
-
-**Add info and url to create a brand new account here **
+* [Guest Access](http://studio.azureml.net/home/anonymous) - This does not require an Azure subscription or a credit card. It is anonymous access.  After 8 hours the workspace gets reset.  This is a great option for evaluation and this Challenge.
+* [Your Own Account](https://studio.azureml.net/Home) - Sign in and use a work, school or Microsoft account. Please do not take a tour now, explore the tour later.  There are two types:
+    * Free Account ([Microsoft Account](https://signup.live.com/signup) required) - 10 GB of Storage, R and Python Scripts and Web Service access
+    * Enterprise Grade ([Azure Subscription](https://azure.microsoft.com/en-us/free/) required) - Full SLA, Bring your own Azure Storage, parallel graph execution, Elastic Web Service Endpoints
 
 ## 2. Create an Experiment
 
