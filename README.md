@@ -141,7 +141,7 @@ Click on the ```Train Model``` task. In the **Properties** window, select Launch
 ## 7. Select Algorithm
 If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. 
 
-Selecting an algorithm can be overwhelming,  to help narrow the process a [Azure ML Cheat Sheet](aka.ms/azuremlcheatsheet) has been created.  By narrowing the type of problem you are solving can find the algorithms that will be most likely to generate a good model. 
+Selecting an algorithm can be overwhelming,  to help narrow the process a [Azure ML Cheat Sheet](https://aka.ms/azuremlcheatsheet) has been created.  By narrowing the type of problem you are solving can find the algorithms that will be most likely to generate a good model. 
 
 Today we are doing binary classification also known as Two-Class Classification.  Using the cheat sheet we can narrow our selection to a standard algorithm called ```Two-Class Neural Network```.  
 
