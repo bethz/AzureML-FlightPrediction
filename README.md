@@ -145,7 +145,7 @@ Selecting an algorithm can be overwhelming,  to help narrow the process a [Azure
 
 Today we are doing binary classification also known as Two-Class Classification.  Using the cheat sheet we can narrow our selection to a standard algorithm called ```Two-Class Neural Network```.  
 
-As you can see there are many Two-Class algorithms that we can choose from so we maybe want to try different ones out as we refine our model.  Swapping out or even comparing two algorithms is made easy with Azure Machine learning as you will see.
+As you can see there are many Two-Class algorithms that we can choose from so we may want to try different ones out as we refine our model.  Swapping out or even comparing two algorithms is made easy with Azure Machine learning as you will see.
 
 ### A. Connect algorithm
 Type “**two-class**” into the search bar. You will see a number of different classification algorithms listed and each has its own advantages and disadvantages. Each of the two-class algorithms is designed to predict a binary outcome. 
