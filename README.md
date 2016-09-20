@@ -57,6 +57,7 @@ Type “flight” into the search bar.
 
 Drag the ```Flight on-time performance Dataset``` to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
 
+[UPDATE SCREENSHOT TO SHOW DRAG]
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649065/7e86d826-7e8b-11e6-8a44-6ea684e41616.png" width="600">
 
 ### C. Review Data
@@ -82,7 +83,6 @@ You need to review the data in the dataset and decide which columns represent da
 First, type "**project**" into the search bar and drag the ```Select Columns in Dataset``` Manipulation to the workspace.
 This manipulation enables you to specify which columns in the data set you think are significant to the prediction.  
 
-[UPDATE SCREENSHOT TO SHOW DRAG]
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png" width="600">
 
 ### B. Connect Flight on-time performance task to Select Columns in Dataset task
