@@ -189,24 +189,13 @@ You want higher values for True positives and True negatives, you want low value
 From the model, there were no False Positives which is good. 
 But, you can see from the results above my model predicted every single flight would be on time, not very helpful! I think we need to try something else…
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png" width="600">
 <img src="https://cloud.githubusercontent.com/assets/6098674/18654588/5bb45d44-7eb0-11e6-8f7f-8d08fc1d54a2.png" width="600">
 
 Your challenge is to improve the model and try different experiments. Change the algorithm, change algorithm parameters, change project columns to get the best possible accuracy/true/false positive/negative results! 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png" width="600">
 
 Good Luck! 
 
-![5b](https://cloud.githubusercontent.com/assets/6098674/18654573/4bb8f404-7eb0-11e6-8132-5df1c695d3dc.png)
-![5b](https://cloud.githubusercontent.com/assets/6098674/18654585/5bb1618e-7eb0-11e6-9a6b-b6707baca5d4.png)
-
-![6a](https://cloud.githubusercontent.com/assets/6098674/18654584/5bb0f30c-7eb0-11e6-868e-6c53699733fe.png)
-![6b](https://cloud.githubusercontent.com/assets/6098674/18654586/5bb1b45e-7eb0-11e6-964c-70d3cc56e1f9.png)
-![8a](https://cloud.githubusercontent.com/assets/6098674/18654582/5bad37b2-7eb0-11e6-8871-1e3de2936fc8.png)
-![11a](https://cloud.githubusercontent.com/assets/6098674/18654583/5bb07cf6-7eb0-11e6-93eb-a24996c45176.png)
-![12 algotry](https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png)
-![12graph](https://cloud.githubusercontent.com/assets/6098674/18654588/5bb45d44-7eb0-11e6-8f7f-8d08fc1d54a2.png)
-![12true](https://cloud.githubusercontent.com/assets/6098674/18654590/5bc1bdcc-7eb0-11e6-906a-bd4ba1f33c51.png)
-![new4d](https://cloud.githubusercontent.com/assets/6098674/18654589/5bc17c2c-7eb0-11e6-9283-6999436acd59.png)
 
 
 
