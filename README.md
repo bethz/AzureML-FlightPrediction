@@ -32,10 +32,11 @@ Let's get started by making a new experiment.
 Select "**+New**" in the lower left corner.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/2ANewExperiment.png" width="600">
+
 ### B. Select Blank Experiment
 
 To the right of Experiment, you will see a tile with a plus sign and the words Blank Experiment.
-Select + Blank Experiment.
+Select ```+ Blank Experiment```.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/2bBlankExperiment.png" width="600">
 
@@ -56,17 +57,16 @@ Type “flight” into the search bar.
 
 Drag the ```Flight on-time performance Dataset``` to the workspace as show in the image. This is one of many sample datasets built into Azure Machine Learning Studio designed to help you learn and explore the tool.
 
-[UPDATE SCREENSHOT TO SHOW DRAG]
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/3b.png" width="600">
 
 ### C. Review Data
 Right click on the dataset on your worksheet and select **dataset | visualize** from the pop-up menu. 
 
-<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/3cdataset.png" width="600"> 
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/3cvis.png" width="600">
 
 Notice the graphs or charts at the top of each data column. Explore the dataset by clicking on different columns. It’s essential in Machine Learning to be familiar with your data and visualizing your dataset is a great first step.  This dataset provides a great deal of information about flights and whether or not they arrived on time. We are going to use Machine Learning to use this data to create a model that predicts whether a given flight will be late. 
 
-<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/3cvis.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/3cdataset.png" width="600"> 
 
  Note: In an actual data science experiment, it is likely going to be necessary to [Data Wrangle](https://en.wikipedia.org/wiki/Data_wrangling) or clean dirty data. For this example, the data set is clean.
 
@@ -79,20 +79,20 @@ Click on the X in the top right corner of the window to close the data visualiza
 You need to review the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ```ArrDel15```.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
 
 ### A. Add Manipulation to Select Columns in Dataset
-First, type "**project**" into the search bar and drag the ```Select Columns in Dataset``` Manipulation to the workspace.
+First, type "**project**" into the search bar and drag the ```Select Columns in Dataset``` manipulation to the workspace.
 This manipulation enables you to specify which columns in the data set you think are significant to the prediction.  
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4a.png" width="600">
 
-### B. Connect Flight on-time performance task to Select Columns in Dataset task
+### B. Connect Flight on-time performance task to ```Select Columns in Dataset``` task
 Connect the output of ```Flight on-time performance``` dataset to the input of the ```Select Columns in Dataset``` by clicking on the lower center dot and dragging to the input, top center dot, of the ```Select Columns in Dataset``` task.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18649067/7e95f8e2-7e8b-11e6-8495-7ac33168f341.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4b.png" width="600">
+
 ### C. Launch Column Selector
 Click on the ```Select Columns in Dataset``` module, then on the far right, select **Launch column selector**.
 
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4c.png" width="600">
-[NEED SCREENSHOT circling button]
 
 ### D. Select Columns
 Select the columns you think affect whether or not a flight is delayed as well as the column we want to predict ```ArrDel15```. In the following screenshot, I selected ```Month```, ```Carrier (airline)```, ```OriginAirportID```, ```DestAirportID```, and ```ArrDel15```. You might select more or less columns.  You can also add or remove columns later.
@@ -100,11 +100,8 @@ Select the columns you think affect whether or not a flight is delayed as well a
 <img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/new4d.png" width="600">
 
 ### E. Complete Column Selection
+
 Select the checkbox in the lower right of the **Select columns** window.
-
-<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/4e.png" width="600">
-
-[MAYBE SCREEN SHOT?]
 
 ## 5. Split The Data Into A Training And Test Set
 
@@ -140,7 +137,7 @@ Hovering over the input and output dots will reveal what each input/output repre
 ### B. Identify Predicted Value
 Click on the ```Train Model``` task. In the **Properties** window, select Launch Column Selector. Select the column ```ArrDel15``` by typing "arrdel15" in to the text box (a smart filter of columns will appear). Click the checkbox in the lower right corner to complete the operation.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654586/5bb1b45e-7eb0-11e6-964c-70d3cc56e1f9.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/6b.png" width="600">
 
 ## 7. Select Algorithm
 If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. 
@@ -156,7 +153,7 @@ Type “**two-class**” into the search bar. You will see a number of different
 
 Select ```Two-Class Neural Network``` and drag it to the workspace. Connect the output of the ```Two-Class Neural Network``` task to the **leftmost** input of the ```Train Model``` task.
 
-<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/8a.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/7a.png" width="600">
 
 [NEED IMAGE]
 
@@ -168,7 +165,7 @@ Type “**score**” into the search bar and drag the ```Score Model``` task to 
 
 Connect the output of ```Train Model``` to the **left input** of the ```Score Model``` task. Connect the Test Data, the **right output** of the ```Split Data``` task to the **right input** of the ```Score Model``` task as shown in the following screenshot.  The output of this task is a scored dataset.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654582/5bad37b2-7eb0-11e6-8871-1e3de2936fc8.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/8a.png" width="600">
 
 ## 9. Evaluate Model
 Next, the model is evaluated to determine its accuracy.  This is done by evaluating the trained model by using the test data.
@@ -180,7 +177,7 @@ Connect the output of the ```Score model``` task to the **left input** of the ``
 
 You are now ready to run your experiment!
 
-[NEED SCREEN SHOT]
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/9a.png" width="600">
 
 ## 10. Run Experiment
 
@@ -200,7 +197,7 @@ It is usually necessary to evaluate the model, improve it, re-run it and repeat.
 When the entire experiment is completed,  right click on the ```Evaluate Model``` task and select “**Evaluation results | Visualize**” to see how well the model predicted delayed flights.  
 
 [UPDATE SCREENSHOT TO highlight clicks]
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654583/5bb07cf6-7eb0-11e6-93eb-a24996c45176.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/11a.png" width="600">
 
 ## 12. Interpreting Results
 
@@ -208,7 +205,7 @@ The first run of a model is a baseline and is considered a first step.
 
 One useful piece of the evaluation results is the first graph the **True Positive Rate versus False Positive Rate**. This graph is a representation of the Area Under the Curve. A 45 degree flat line on this chart indicates guessing randomly. A slightly more accurate model than random guessing looks like the image below, our current model.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/12graph.png" width="600">
 
 If you scroll down you can see the accuracy – Higher accuracy is good!
 You can also see the number of false and true positive and negative predictions.
@@ -219,7 +216,7 @@ You can also see the number of false and true positive and negative predictions.
 
 You want higher values for True positives and True negatives, you want low values for False Positives and False negatives.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18654590/5bc1bdcc-7eb0-11e6-906a-bd4ba1f33c51.png" width="600">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/12truepos.png" width="50">
 
 From the model, there were no False Positives which is good. 
 But, you can see from the results above my model predicted every single flight would be on time, not very helpful! I think we need to try something else…
