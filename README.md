@@ -105,15 +105,17 @@ Select the checkbox in the lower right of the **Select columns** window.
 
 ## 5. Split The Data Into A Training And Test Set
 
+The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop.
+
 ### A. Split Data Task
-Type “split” into the search bar and drag the Split Data task to the workspace. Connect the output of Project Columns task to the input of the Split Data task.
+
+Type “split” into the search bar and drag the Split Data task to the workspace. Connect the output of Select Columns in Dataset task to the input of the Split Data task.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649068/7ec6a500-7e8b-11e6-8c36-7ca009ca3e22.png" width="600">
 
 ### B. Split our input data
-First, connect the output of the Select Columns in Dataset to the input of the Split Data task.
 
-The Split Data task allows us to divide up our data, we need some of the data to try and find patterns so we can make predictions. We need to save some of the data to test if the model we create successfully makes predictions. Traditionally, you will split the data 80/20 or 70/30. For today’s challenge everyone will use an 80/20 split. That means 80% of the data will be used to train the model and 20% will be used to test the accuracy of the model we develop. Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows. 
+Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows. 
 
 ## 6. Train the model
 
