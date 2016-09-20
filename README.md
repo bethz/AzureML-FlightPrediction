@@ -80,6 +80,7 @@ You need to review the data in the dataset and decide which columns represent da
 First, type "**project**" into the search bar and drag the ```Select Columns in Dataset``` Manipulation to the workspace.
 This manipulation enables you to specify which columns in the data set you think are significant to the prediction.  
 
+[UPDATE SCREENSHOT TO SHOW DRAG]
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png" width="600">
 
 ### B. Connect Flight on-time performance task to Select Columns in Dataset task
@@ -89,6 +90,7 @@ Connect the output of ```Flight on-time performance``` dataset to the input of t
 ### C. Launch Column Selector
 Click on the ```Select Columns in Dataset``` module, then on the far right, select **Launch column selector**.
 
+[NEED SCREENSHOT circling button]
 
 ### D. Select Columns
 Select the columns you think affect whether or not a flight is delayed as well as the column we want to predict ```ArrDel15```. In the following screenshot, I selected ```Month```, ```Carrier (airline)```, ```OriginAirportID```, ```DestAirportID```, and ```ArrDel15```. You might select more or less columns.  You can also add or remove columns later.
@@ -97,6 +99,8 @@ Select the columns you think affect whether or not a flight is delayed as well a
 
 ### E. Complete Column Selection
 Select the checkbox in the lower right of the **Select columns** window.
+
+[MAYBE SCREEN SHOT?]
 
 ## 5. Split The Data Into A Training And Test Set
 
@@ -126,6 +130,7 @@ Type “**train model**” into the search bar. Drag the ```Train Model``` task 
 
 Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, ```Results Dataset1```, (the circle on the left) of the ```Split Data``` task to the **rightmost** input of the ```Train Model``` task. This will take 80 % of our data and use it to train/teach our model to make predictions.
 
+[UPDATE PHOTO TO SHOW CONNECTION]
 <img src="https://cloud.githubusercontent.com/assets/6098674/18654584/5bb0f30c-7eb0-11e6-868e-6c53699733fe.png" width="600">
 
 ### B. Identify Predicted Value
@@ -147,6 +152,7 @@ Type “**two-class**” into the search bar. You will see a number of different
 
 Select ```Two-Class Neural Network``` and drag it to the workspace. Connect the output of the ```Two-Class Neural Network``` task to the **leftmost** input of the ```Train Model``` task.
 
+[NEED IMAGE]
 
 ## 8. Score the Model
 After the model is trained, it is evaluated to determine how well it predicts delayed flights, so the model is scored by testing it against the Test Data which is the remaining 20% of the data we split to the second output of the ```Split Data``` task.
@@ -168,6 +174,8 @@ Connect the output of the ```Score model``` task to the **left input** of the ``
 
 You are now ready to run your experiment!
 
+[NEED SCREEN SHOT]
+
 ## 10. Run Experiment
 
 ### A. Select Run
@@ -185,6 +193,7 @@ It is usually necessary to evaluate the model, improve it, re-run it and repeat.
 
 When the entire experiment is completed,  right click on the ```Evaluate Model``` task and select “**Evaluation results | Visualize**” to see how well the model predicted delayed flights.  
 
+[UPDATE SCREENSHOT TO highlight clicks]
 <img src="https://cloud.githubusercontent.com/assets/6098674/18654583/5bb07cf6-7eb0-11e6-93eb-a24996c45176.png" width="600">
 
 ## 12. Interpreting Results
