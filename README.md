@@ -98,7 +98,7 @@ On the far right, select **Launch column selector**.
 ### D. Select Columns
 Select the columns you think affect whether or not a flight is delayed as well as the column we want to predict ArrDel15. In the following screenshot, I selected Month, Carrier (airline), OriginAirportID, DestAirportID, and ArrDel15. You might select more or less columns.  You can also add or remove columns later.
 
-<img src="https://cloud.githubusercontent.com/assets/6098674/18649066/7e8d4904-7e8b-11e6-9c74-1c3ac80f3387.png" width="600">
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654589/5bc17c2c-7eb0-11e6-9283-6999436acd59.png" width="600">
 
 ### E. Complete Column Selection
 Select the checkbox in the lower right of the **Select columns** window.
@@ -117,6 +117,8 @@ Type “split” into the search bar and drag the Split Data task to the workspa
 
 Click on the Split Data task to bring up the Properties Pane and specify .8 as the Fraction of rows. 
 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654585/5bb1618e-7eb0-11e6-9a6b-b6707baca5d4.png" width="600">
+
 ## 6. Train The Model
 
 Next, we identify which data is to be predicted. In our case, we are predicting the value of the column ArrDel15 which indicates if a flight arrival time was delayed by more than 15 minutes.
@@ -125,8 +127,12 @@ Next, we identify which data is to be predicted. In our case, we are predicting 
 
 Type “train model” into the search bar. Drag the train model task to the workspace. Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, Results Dataset1, (the one on the left) of the Split Data task to the **rightmost** input of the Train model task. This will take 80 % of our data and use it to train/teach our model to make predictions.
 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654584/5bb0f30c-7eb0-11e6-868e-6c53699733fe.png" width="600">
+
 ### B. Identify Predicted Value
 Click on the Train Model task. In the **Properties** window, select Launch Column Selector. Select the column ArrDel15. Click the checkbox in the lower right corner to complete the operation.
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654586/5bb1b45e-7eb0-11e6-964c-70d3cc56e1f9.png" width="600">
 
 ## 7. Select Algorithm
 If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. We are going to use a standard algorithm called two-class Neural Network.  
@@ -139,6 +145,8 @@ After the model is trained, it is evaluated to determine how well it predicts de
 
 ### A. Connect test data
 Type “**score**” into the search bar and drag the **Score Model** task to the workspace. Connect the output of Train Model to the left input of the Score Model task, the Trained Model input. Connect the Test Data, the right output of the Split Data task to the Dataset input or the right input of the Score Model task as shown in the following screenshot.  The output of this task is a scored dataset.
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654582/5bad37b2-7eb0-11e6-8871-1e3de2936fc8.png" width="600">
 
 ## 9. Evaluate Model
 Next, the model is evaluated to determine its accuracy.  This is done by evaluating the trained model by using the test data.
@@ -161,6 +169,8 @@ It is usually necessary to evaluate the model, improve it, re-run it and repeat.
 
 When the entire experiment is completed,  right click on the **Evaluate Model** task and select “**Evaluation results | Visualize**” to see how well the model predicted delayed flights.  
 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654583/5bb07cf6-7eb0-11e6-93eb-a24996c45176.png" width="600">
+
 ## 12. Interpreting Results
 
 The first run of a model is a baseline and is considered a first step.
@@ -174,12 +184,29 @@ You can also see the number of false and true positive and negative predictions.
 - False negatives indicate how often your model predicted a flight would be on time, when in fact it was delayed (your model predicted incorrectly)
 You want higher values for True positives and True negatives, you want low values for False Positives and False negatives.
 
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654590/5bc1bdcc-7eb0-11e6-906a-bd4ba1f33c51.png" width="600">
+
 From the model, there were no False Positives which is good. 
 But, you can see from the results above my model predicted every single flight would be on time, not very helpful! I think we need to try something else…
+
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png" width="600">
+<img src="https://cloud.githubusercontent.com/assets/6098674/18654588/5bb45d44-7eb0-11e6-8f7f-8d08fc1d54a2.png" width="600">
 
 Your challenge is to improve the model and try different experiments. Change the algorithm, change algorithm parameters, change project columns to get the best possible accuracy/true/false positive/negative results! 
 
 Good Luck! 
+
+![5b](https://cloud.githubusercontent.com/assets/6098674/18654573/4bb8f404-7eb0-11e6-8132-5df1c695d3dc.png)
+![5b](https://cloud.githubusercontent.com/assets/6098674/18654585/5bb1618e-7eb0-11e6-9a6b-b6707baca5d4.png)
+
+![6a](https://cloud.githubusercontent.com/assets/6098674/18654584/5bb0f30c-7eb0-11e6-868e-6c53699733fe.png)
+![6b](https://cloud.githubusercontent.com/assets/6098674/18654586/5bb1b45e-7eb0-11e6-964c-70d3cc56e1f9.png)
+![8a](https://cloud.githubusercontent.com/assets/6098674/18654582/5bad37b2-7eb0-11e6-8871-1e3de2936fc8.png)
+![11a](https://cloud.githubusercontent.com/assets/6098674/18654583/5bb07cf6-7eb0-11e6-93eb-a24996c45176.png)
+![12 algotry](https://cloud.githubusercontent.com/assets/6098674/18654587/5bb36b8c-7eb0-11e6-874e-70746c1caf2d.png)
+![12graph](https://cloud.githubusercontent.com/assets/6098674/18654588/5bb45d44-7eb0-11e6-8f7f-8d08fc1d54a2.png)
+![12true](https://cloud.githubusercontent.com/assets/6098674/18654590/5bc1bdcc-7eb0-11e6-906a-bd4ba1f33c51.png)
+![new4d](https://cloud.githubusercontent.com/assets/6098674/18654589/5bc17c2c-7eb0-11e6-9283-6999436acd59.png)
 
 
 
