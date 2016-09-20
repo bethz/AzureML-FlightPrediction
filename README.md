@@ -78,16 +78,18 @@ Notice the graphs or charts at the top of each data column. Explore the dataset 
 Click on the X in the top right corner of the window to close the data visualization window..
  
 ## 4. Specify Columns to Use
-You need to look at the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ArrDel15.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
+You need to review the data in the dataset and decide which columns represent data that you think will affect whether or not a flight is delayed.  You also need to select the column that you want to predict.  In this case, we are going to predict the value of ArrDel15.  This is a binary state, 0/1, that indicates whether a flight arrival was delayed by more than 15 minutes.
 
 ### A. Add Manipulation to Select Columns in Dataset
-First, type**project** into the search bar and drag the **Select Columns in Dataset" Manipulation to the workspace.
+First, type "**project**" into the search bar and drag the "**Select Columns in Dataset**" Manipulation to the workspace.
 This manipulation enables you to specify which columns in the data set you think are significant to the prediction.  
+Select the **Flight on-time performance** dataset by left clicking on it.
+Connect the output of **Flight on-time performance** dataset to the input of the **Select Columns in Dataset**.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649063/7e85ddf4-7e8b-11e6-95da-f93a2187f2b9.png" width="600">
 
 ### B. Launch Column Selector
-On the far right, select *Launch column selector*
+On the far right, select **Launch column selector**
 
 
 ### C. Select Columns
@@ -97,7 +99,6 @@ Select the columns you think affect whether or not a flight is delayed as well a
 
 ### D. Complete Column Selection
 Select the checkbox in the lower right of the Select Columns Window.
-Note the Exclamation Point in the Select Columns Task. Hover over it to see the error. This will be fixed in the next step.
 
 ### E. Connect Flight on-time performance task to Select Columns in Dataset task
 Select the output of the Flight on-time performance task by clicking on the lower center dot and dragging to the input, top center dot, of the Select Columns in Dataset task.
