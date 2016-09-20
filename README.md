@@ -33,6 +33,8 @@ Select "**+New**" in the lower left corner.
 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18649265/93931a12-7e8c-11e6-9298-7940b5103937.png" width="600">
 
+
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/2ANewExperiment.png" width="600">
 ### B. Select Blank Experiment
 
 To the right of Experiment, you will see a tile with a plus sign and the words Blank Experiment.
