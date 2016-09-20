@@ -141,9 +141,9 @@ After the model is trained, it is evaluated to determine how well it predicts de
 Type “**score**” into the search bar and drag the **Score Model** task to the workspace. Connect the output of Train Model to the left input of the Score Model task, the Trained Model input. Connect the Test Data, the right output of the Split Data task to the Dataset input or the right input of the Score Model task as shown in the following screenshot.  The output of this task is a scored dataset.
 
 ## 9. Evaluate Model
-Next, the model is evaluated to determine its accuracy.  This is done by comparing the output of the trained model with the test data.
+Next, the model is evaluated to determine its accuracy.  This is done by evaluating the trained model by using the test data.
 
-### A. Compare Trained Model Output to the Test Data
+### A. Determine accuracy of model
 Type “evaluate” into the search bar and drag the **Evaluate Model** task to the bottom of the workspace. Connect the Scored dataset output of the **Score model** task to the left input of the Evaluate Model task.  The other input and output of the Evaluate Model task are not connected at this time.
 
 You are now ready to run your experiment!
@@ -153,28 +153,33 @@ You are now ready to run your experiment!
 ### A. Select Run
 Select Run on the bottom toolbar. You will see green checkmarks appear on each task as it completes. 
 
-## 11. Evaluate Model
+## 11. Post Run: Evaluate Model
 
 It is usually necessary to evaluate the model, improve it, re-run it and repeat.  
 
-### A. Evaluate the model
-When the entire experiment is completed,  right click on the Evaluate Model task and select “ Evaluation results | Visualize” to see how well the model predicted delayed flights.  
+### A. Evaluate The Model
+
+When the entire experiment is completed,  right click on the **Evaluate Model** task and select “**Evaluation results | Visualize**” to see how well the model predicted delayed flights.  
 
 ## 12. Interpreting Results
+
 The first run of a model is a baseline and is considered a first step.
 One useful piece of the evaluation results are the True Positive versus False Positive Rate.  A 45 degree flat line on this chart indicates guessing randomly. A slightly more accurate model than random guessing looks like this image, our model.
 
 If you scroll down you can see the accuracy – Higher accuracy is good!
 You can also see the number of false and true positive and negative predictions.
-•	True positives are how often your model correctly predicted a flight would be late
-•	False positives are how often your model predicted a flight would be late, when the flight was actually on time (your model predicted incorrectly)
-•	True negatives indicate how often your model correctly predicted a flight would be on time (arrDel15 is false)
-•	False negatives indicate how often your model predicted a flight would be on time, when in fact it was delayed (your model predicted incorrectly)
+- True positives are how often your model correctly predicted a flight would be late
+- False positives are how often your model predicted a flight would be late, when the flight was actually on time (your model predicted incorrectly)
+- True negatives indicate how often your model correctly predicted a flight would be on time (arrDel15 is false)
+- False negatives indicate how often your model predicted a flight would be on time, when in fact it was delayed (your model predicted incorrectly)
 You want higher values for True positives and True negatives, you want low values for False Positives and False negatives.
 
 From the model, there were no False Positives which is good. 
 But, you can see from the results above my model predicted every single flight would be on time, not very helpful! I think we need to try something else…
-Your challenge is to improve the model and try different experiments. Change the algorithm, change algorithm parameters, change project columns to get the best possible accuracy/true/false positive/negative results! Good Luck! 
+
+Your challenge is to improve the model and try different experiments. Change the algorithm, change algorithm parameters, change project columns to get the best possible accuracy/true/false positive/negative results! 
+
+Good Luck! 
 
 
 
