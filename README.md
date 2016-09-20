@@ -69,6 +69,8 @@ Notice the graphs or charts at the top of each data column. Explore the dataset 
 <img src="https://cloud.githubusercontent.com/assets/6098674/18651431/22d906bc-7e99-11e6-957d-dba92669f412.png" width="600">
 
  Note: In an actual data science experiment, it is likely going to be necessary to [Data Wrangle](https://en.wikipedia.org/wiki/Data_wrangling) or clean dirty data. For this example, the data set is clean.
+
+ You can find the column definitions for this data on the [US Department of Transportation site](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time).
  
 ### D. Close the data visualization window
 Click on the X in the top right corner of the window to close the data visualization window..
