@@ -115,32 +115,36 @@ Type “split” into the search bar and drag the Split Data task to the workspa
 
 ### B. Split our input data
 
-Click on the Split Data task to bring up the properties and specify .8 as the Fraction of rows. 
+Click on the Split Data task to bring up the Properties Pane and specify .8 as the Fraction of rows. 
 
-## 6. Train the model
+## 6. Train The Model
+
+Next, we identify which data is to be predicted. In our case, we are predicting the value of the column ArrDel15 which indicates if a flight arrival time was delayed by more than 15 minutes.
 
 ### A. Connect Data
-Type “train model” into the search bar. Drag the train model task to the workspace. Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, Results Dataset1, (the one on the left) of the Split Data task to the rightmost input of the Train model task. This will take 80 % of our data and use it to train/teach our model to make predictions.
+
+Type “train model” into the search bar. Drag the train model task to the workspace. Hovering over the input and output dots will reveal what each input/output represents. Connect the first output, Results Dataset1, (the one on the left) of the Split Data task to the **rightmost** input of the Train model task. This will take 80 % of our data and use it to train/teach our model to make predictions.
 
 ### B. Identify Predicted Value
-Next,we identify which data is to be predicted. In our case, we are predicting the value of the column ArrDel15 which indicates if a flight arrival time was delayed by more than 15 minutes. Click on the Train Model task. In the properties window select Launch Column Selector. Select the column ArrDel15. Click the checkbox in the lower right corner to complete the operation.
-
+Click on the Train Model task. In the **Properties** window, select Launch Column Selector. Select the column ArrDel15. Click the checkbox in the lower right corner to complete the operation.
 
 ## 7. Select Algorithm
-If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. We are going to use a standard algorithm call two-class Neural Network.  
+If you are a data scientist who creates their own algorithms, you could now import your own R code to analyze the patterns. But, Azure ML provides a number of standard algorithms which are available for use. We are going to use a standard algorithm called two-class Neural Network.  
+
 ### A. Connect algorithm
 Type “two-class” into the search bar. You will see a number of different classification algorithms listed and each has its own advantages and disadvantages. Each of the two-class algorithms is designed to predict a binary outcome. Select Two-Class Neural Network and drag it to the workspace. Connect the output of the Two-Class Neural Network task to the leftmost input of the Train Model task.
 
 ## 8. Score the Model
-After the model is trained, it is evaluated to determine how well it predicts delayed flights, so the model is scored by testing it against the Test Data which is remaining 20% of the data we split to the second output of the Split Data task.
+After the model is trained, it is evaluated to determine how well it predicts delayed flights, so the model is scored by testing it against the Test Data which is the remaining 20% of the data we split to the second output of the Split Data task.
 
 ### A. Connect test data
-Type “score” into the search bar and drag the Score Model task to the workspace. Connect the output of Train Model to the left input of the Score model task, the Trained Model input. Connect the Test Data, the right output of the Split Data task to the Dataset input or the right input of the Score Model task as shown in the following screenshot.  The output of this task is a Scored dataset.
+Type “**score**” into the search bar and drag the **Score Model** task to the workspace. Connect the output of Train Model to the left input of the Score Model task, the Trained Model input. Connect the Test Data, the right output of the Split Data task to the Dataset input or the right input of the Score Model task as shown in the following screenshot.  The output of this task is a scored dataset.
 
 ## 9. Evaluate Model
-Next, the model is evaluated to determine its accuracy.
+Next, the model is evaluated to determine its accuracy.  This is done by comparing the output of the trained model with the test data.
 
-### A.Type “evaluate” into the search bar and drag the Evaluate Model task to the bottom of the workspace. Connect the Scored dataset output of the Score model task to the left input of the Evaluate Model task.  The other input and output of the Evaluate Model task are not connected at this time.
+### A. Compare Trained Model Output to the Test Data
+Type “evaluate” into the search bar and drag the **Evaluate Model** task to the bottom of the workspace. Connect the Scored dataset output of the **Score model** task to the left input of the Evaluate Model task.  The other input and output of the Evaluate Model task are not connected at this time.
 
 You are now ready to run your experiment!
 
