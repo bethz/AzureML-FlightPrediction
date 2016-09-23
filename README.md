@@ -13,4 +13,12 @@ If you have improvement that is not listed below create a Pull Request and we wi
    * ```Diverted```
    * ```Cancelled```
 
-   
+* Get more data from the multiple years and months from http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236&DB_Short_Name=On-Time (all the rows in the data set are from one month of one year)
+
+* Bring in weather Dataset
+
+* Use a different algorithm (Bayes Point Machine seemed to help)
+
+* Calculate flight duration and use it as a field
+
+* Change the parameters for the two-class neural network (or use sweep module)
