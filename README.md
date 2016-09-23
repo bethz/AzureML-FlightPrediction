@@ -212,7 +212,7 @@ You can also see the number of false and true positive and negative predictions.
 
 You want higher values for True positives and True negatives, you want low values for False Positives and False negatives.
 
-<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/12truepos.png" width="50">
+<img src="https://github.com/bethz/AzureML-FlightPrediction/blob/master/12truepos.png" width="600">
 
 From the model, there were no False Positives which is good. 
 But, you can see from the results above my model predicted every single flight would be on time, not very helpful! I think we need to try something else…
