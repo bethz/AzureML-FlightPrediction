@@ -17,7 +17,7 @@ If you have improvement that is not listed below create a Pull Request and we wi
 
 * Bring in weather Dataset
 
-* Use a different algorithm (Bayes Point Machine seemed to help)
+* Use a different algorithm
 
 * Calculate flight duration and use it as a field
 
