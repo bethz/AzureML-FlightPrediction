@@ -36,7 +36,7 @@ req =  list(
 )
 
 body = enc2utf8(toJSON(req))
-api_key = "BLABLABLABLA" # Replace this with the API key for the web service
+api_key = "Put the API key here" # Replace this with the API key for the web service
 authz_hdr = paste('Bearer', api_key, sep=' ')
 
 h$reset()
