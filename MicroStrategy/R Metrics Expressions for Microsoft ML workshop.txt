@@ -1,0 +1,14 @@
+Metric 1:
+
+Predicted: Scored Labels
+
+RScript<StringParam1="Scored Labels", _RScriptFile="c:\FlightML.R", _InputNames="year, quarter, month, dayofmonth, dayofweek, carrier, originairportid, destairportid, crsdeptime, deptimeblk, depdelay, depdel15, crsarrtime, arrtimeblk, arrdelay, arrdel15, cancelled, diverted">(Year, Quarter, Month, [Day of Month], [Day of Week], Carrier, [Origin Airport ID], [Destination Airport ID], [CRS Departure Time], [Departure Time Block], [Departure Delay (min)], [Departure Delay Indicator], [CRS Arrival Time], [Arrival Time Block], [Arrival Delay (min)], [Arrival Delay Indicator], [Cancelled Flight Indicator], [Diverted Flight Indicator])
+
+
+
+Metric 2:
+
+Predicted Flight Status
+
+CaseV([Predicted: Scored Labels], "0", "<span style='color:green'>On‐Time</span>", "<span style='color:red'>Delay</span>")
+
