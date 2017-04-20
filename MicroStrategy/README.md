@@ -1,4 +1,4 @@
-# How to create your own Azure Machine Learning Model with MicroStrategy Desktop
+# How to Build & Visualize Machine Learning Predictions with Microsoft Azure & MicroStrategy
                             
 Haven’t you always wondered where machine learning could actually be used by you? 
 Imagine a powerful cloud-based machine learning application that’s created by a simple drag-n-drop interface along with powerful self-service analytics to provide useful insights.
